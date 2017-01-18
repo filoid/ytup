@@ -13,4 +13,4 @@ echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 cd $BUILD_DIR
 git clone $DOWNLOAD_URL
 cd youtube-upload
-sudo python setup.py install
+python setup.py install
