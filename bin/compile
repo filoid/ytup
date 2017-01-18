@@ -1,0 +1,16 @@
+#!/bin/sh
+
+indent() {
+  sed -u 's/^/       /'
+}
+
+echo "-----> Install youtube-upload"
+BUILD_DIR=$1
+DOWNLOAD_URL="https://github.com/tokland/youtube-upload.git"
+
+echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
+
+cd $BUILD_DIR
+git clone $DOWNLOAD_URL
+cd youtube-upload
+sudo python setup.py install
